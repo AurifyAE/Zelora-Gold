@@ -25,7 +25,9 @@ body {
     animation: logo-spin infinite 20s linear;
   }
 }
-
+body {
+  opacity: 0.4 !important;
+}
 .card {
   padding: 2em;
 }
