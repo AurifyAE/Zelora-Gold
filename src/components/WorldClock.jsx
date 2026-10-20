@@ -1,0 +1,144 @@
+import React, { useEffect, useState } from "react";
+import { Box, Typography } from "@mui/material";
+
+const clockConfig = [
+  {
+    key: "uae",
+    label: "UAE",
+    timeZone: "Asia/Dubai",
+    flag: "/images/uae.png",
+  },
+
+  {
+    key: "london",
+    label: "LONDON",
+    timeZone: "Europe/London",
+    flag: "/images/uk.png",
+  },
+  {
+    key: "usa",
+    label: "USA",
+    timeZone: "America/New_York",
+    flag: "/images/usa.png",
+  },
+];
+
+const WorldClockHorizontal = () => {
+  const [times, setTimes] = useState({});
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+
+      const timeOptions = {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true,
+      };
+
+      const updatedTimes = {};
+
+      clockConfig.forEach((clock) => {
+        updatedTimes[clock.key] = now.toLocaleTimeString("en-US", {
+          ...timeOptions,
+          timeZone: clock.timeZone,
+        });
+      });
+
+      setTimes(updatedTimes);
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-around",
+        gap: "1vw",
+        width: "100%",
+      }}
+    >
+      {clockConfig.map((clock) => (
+        <Box
+          key={clock.key}
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            // width: "100%",
+            gap: {
+              xs: "10px",
+              lg: "0.8vw",
+            },
+            padding: "0.4vw 1.2vw",
+            borderRadius: "0.8vw",
+            // background: "rgba(255 234 185 / 0.2)",
+            // border: "1px solid #eaaa35",
+            // boxShadow: "0 0.4vw 1.2vw rgba(0, 0, 0, 0.2)",
+            // backdropFilter: "blur(0.4vw)",
+          }}
+        >
+          <Box
+            sx={{
+              width: {
+                xs: "30px",
+                lg: "3vw",
+              },
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={clock.flag}
+              alt={clock.label}
+              style={{ width: "100%", height: "auto", borderRadius: "2px" }}
+            />
+          </Box>
+
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "start",
+              flexDirection: "column",
+            }}
+          >
+            <Typography
+              sx={{
+                fontSize: {
+                  xs: "14px",
+                  lg: "1vw",
+                },
+                fontWeight: 800,
+                color: "#000", // Platinum Silver
+                letterSpacing: "0.05vw",
+              }}
+            >
+              {clock.label}
+            </Typography>
+
+            <Typography
+              sx={{
+                fontSize: {
+                  xs: "14px",
+                  lg: "1.2vw",
+                },
+                color: "#000",
+                fontWeight: 700,
+                letterSpacing: "0.02vw",
+              }}
+            >
+              {times[clock.key] || "--:--"}
+            </Typography>
+          </Box>
+        </Box>
+      ))}
+    </Box>
+  );
+};
+
+export default WorldClockHorizontal;
