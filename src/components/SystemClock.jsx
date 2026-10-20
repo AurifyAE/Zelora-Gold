@@ -89,7 +89,8 @@ const SystemClock = () => {
             },
             fontWeight: 600,
             letterSpacing: "2px",
-            color: "#000", // Champagne Gold
+            color: "#FFEDA5", // Champagne Gold
+            textShadow: "0 2px 12px rgba(0, 0, 0, 0.6)",
             lineHeight: "1",
           }}
         >
@@ -102,10 +103,11 @@ const SystemClock = () => {
               xs: "12px",
               sm: "1vw",
             },
-            color: "#000", // Platinum Silver
+            color: "#EAEFF5", // Platinum Silver
             letterSpacing: "2px",
             fontWeight: 500,
             lineHeight: "1",
+            textShadow: "0 2px 8px rgba(0, 0, 0, 0.5)",
           }}
         >
           {timeData.day || "-----"}

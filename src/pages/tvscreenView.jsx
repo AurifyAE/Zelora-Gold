@@ -224,7 +224,7 @@ function TvScreen() {
       >
         <Box
           component="img"
-          src="/images/background1.png"
+          src="/images/background.png"
           alt="background"
           sx={{
             height: "100%",
@@ -250,22 +250,6 @@ function TvScreen() {
         padding={{ xs: "20px 2vw 0 2vw", md: "2.5vw 2vw 0 2vw" }}
         width="100%"
       >
-        <Grid
-          xs={12}
-          md={6}
-          display="flex"
-          height="100%"
-          alignItems="center"
-          flexDirection="column"
-          justifyContent="spaceBetween"
-          padding="1vw"
-          gap="1vw"
-        >
-          <SystemClock />
-
-          <WorldClockHorizontal />
-          <SpotRate />
-        </Grid>
         {/* Side: SpotRate & Date Time */}
         <Grid
           xs={12}
@@ -289,8 +273,23 @@ function TvScreen() {
 
           <CommodityTable items={commodities} />
         </Grid>
+        <Grid
+          xs={12}
+          md={6}
+          display="flex"
+          height="100%"
+          alignItems="center"
+          flexDirection="column"
+          justifyContent="spaceBetween"
+          padding="1vw"
+          gap="1vw"
+        >
+          <SystemClock />
 
-        
+          <WorldClockHorizontal />
+          <SpotRate />
+        </Grid>
+
         <Grid
           md={12}
           sx={{
@@ -303,7 +302,7 @@ function TvScreen() {
           }}
         >
           <NewsTicker newsItems={news} />
-        </Grid> 
+        </Grid>
       </Grid>
     </Box>
   );

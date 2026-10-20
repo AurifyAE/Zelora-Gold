@@ -77,10 +77,11 @@ const WorldClockHorizontal = () => {
             },
             padding: "0.4vw 1.2vw",
             borderRadius: "0.8vw",
-            // background: "rgba(255 234 185 / 0.2)",
-            // border: "1px solid #eaaa35",
-            // boxShadow: "0 0.4vw 1.2vw rgba(0, 0, 0, 0.2)",
-            // backdropFilter: "blur(0.4vw)",
+            background:
+              "linear-gradient(135deg, rgba(2, 36, 31, 0.55) 0%, rgba(1, 22, 19, 0.65) 100%)",
+            border: "1px solid rgba(229, 197, 131, 0.25)",
+            boxShadow: "0 0.4vw 1.2vw rgba(0, 0, 0, 0.35)",
+            backdropFilter: "blur(0.6vw)",
           }}
         >
           <Box
@@ -113,9 +114,9 @@ const WorldClockHorizontal = () => {
                   xs: "14px",
                   lg: "1vw",
                 },
-                fontWeight: 800,
-                color: "#000", // Platinum Silver
-                letterSpacing: "0.05vw",
+                fontWeight: 700,
+                color: "#FFEDA5", // Luxury Gold
+                letterSpacing: "0.08vw",
               }}
             >
               {clock.label}
@@ -127,9 +128,9 @@ const WorldClockHorizontal = () => {
                   xs: "14px",
                   lg: "1.2vw",
                 },
-                color: "#000",
+                color: "#FFFFFF",
                 fontWeight: 700,
-                letterSpacing: "0.02vw",
+                letterSpacing: "0.03vw",
               }}
             >
               {times[clock.key] || "--:--"}

@@ -88,19 +88,19 @@ const SpotRate = () => {
     const hasPulse = dir !== "neutral";
 
     // Dynamic styles based on direction
-    let bgColor = "rgba(0, 0, 0, 0.4)";
+    let bgColor = "rgba(0, 20, 17, 0.55)";
     let border = isSilver
-      ? "1px solid rgba(255, 255, 255, 0.08)"
-      : "1px solid rgba(229, 197, 131, 0.15)";
-    let color = "#EAEFF5";
+      ? "1px solid rgba(255, 255, 255, 0.12)"
+      : "1px solid rgba(229, 197, 131, 0.22)";
+    let color = "#FFFFFF";
 
     if (dir === "rise") {
-      bgColor = "#4CBF00";
-      border = "1px solid #4CBF00";
+      bgColor = "#2E8B57";
+      border = "1px solid #3DDC84";
       color = "#ffffff";
     } else if (dir === "fall") {
-      bgColor = "#FF0040";
-      border = "1px solid #FF0040";
+      bgColor = "#8B1E2B";
+      border = "1px solid #FF4D4D";
       color = "#ffffff";
     }
 
@@ -115,11 +115,11 @@ const SpotRate = () => {
       >
         <Typography
           sx={{
-            fontSize: { xs: "14px", md: "1.4vw " },
-            fontWeight: 600,
-            color: "#fff",
+            fontSize: { xs: "14px", md: "1.3vw" },
+            fontWeight: 700,
+            color: isSilver ? "#BAC8D9" : "#FFEDA5",
             letterSpacing: "0.08em",
-            mb: "0.4vw",
+            mb: "0.2vw",
           }}
         >
           {label}
@@ -131,9 +131,10 @@ const SpotRate = () => {
             textAlign: "center",
             bgcolor: bgColor,
             border: border,
-            borderRadius: "1vw",
-            py: "0.8vw",
-            px: "1.1vw",
+            borderRadius: "0.8vw",
+            py: "0.5vw",
+            px: "1vw",
+            boxShadow: "inset 0 2px 8px rgba(0, 0, 0, 0.4)",
             transition: "all 0.4s ease",
             ...(hasPulse && {
               animation:
@@ -164,7 +165,7 @@ const SpotRate = () => {
           sx={{
             fontSize: { xs: "12px", md: "1.3vw" },
             fontWeight: 600,
-            color: "#fff",
+            color: "#EAEFF5",
             mt: "0.4vw",
             letterSpacing: "0.02em",
           }}
@@ -172,7 +173,7 @@ const SpotRate = () => {
           {lowHighLabel}{" "}
           <span
             style={{
-              color: lowHighLabel === "LOW" ? "#29F406" : "#F44646",
+              color: lowHighLabel === "LOW" ? "#3DDC84" : "#FF4D4D",
               fontWeight: 700,
               marginLeft: "0.2vw",
             }}
@@ -188,7 +189,8 @@ const SpotRate = () => {
     const isSilver = theme === "silver";
 
     let title = "GOLD";
-    let panelBg = "rgba(6, 18, 14, 0.65)";
+    let panelBg =
+      "linear-gradient(135deg, rgba(2, 36, 31, 0.65) 0%, rgba(1, 22, 19, 0.75) 100%)";
     let imageSrc = "/images/gold-bar.png";
 
     if (theme === "silver") {
@@ -204,10 +206,11 @@ const SpotRate = () => {
           borderRadius: "1.8vw",
           backdropFilter: "blur(0.8vw)",
           background: panelBg,
-          boxShadow: "0 0.8vw 2vw rgba(0, 0, 0, 0.5)",
+          boxShadow:
+            "0 0.8vw 2.5vw rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 237, 165, 0.12)",
           padding: {
             xs: "4vw 5vw",
-            md: "1.8vw 2.2vw",
+            md: "1.1vw 1.8vw",
           },
           display: "grid",
           alignItems: "center",
@@ -223,15 +226,17 @@ const SpotRate = () => {
               ? `
                 linear-gradient(
                   135deg,
-                  rgba(255, 255, 255, 0.2) 0%,
-                  rgba(77, 191, 0, 0.25) 100%
+                  rgba(255, 255, 255, 0.4) 0%,
+                  rgba(186, 200, 217, 0.15) 50%,
+                  rgba(255, 255, 255, 0.3) 100%
                 )
               `
               : `
                 linear-gradient(
                   135deg,
-                  rgba(229, 197, 131, 0.35) 0%,
-                  rgba(77, 191, 0, 0.25) 100%
+                  rgba(255, 237, 165, 0.5) 0%,
+                  rgba(200, 160, 80, 0.15) 50%,
+                  rgba(255, 237, 165, 0.4) 100%
                 )
               `,
             WebkitMask: `
@@ -307,7 +312,7 @@ const SpotRate = () => {
     <Box
       sx={{
         display: "grid",
-        gap: "2.5vw",
+        gap: "1.1vw",
         width: "100%",
         alignItems: "end",
         marginTop: {

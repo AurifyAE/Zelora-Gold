@@ -22,11 +22,11 @@ const NewsTicker = ({ newsItems = [] }) => {
         overflow: "hidden",
         backdropFilter: "blur(8px)",
         background:
-          "linear-gradient(90deg, rgba(3, 10, 8, 0.85) 0%, rgba(6, 18, 14, 0.75) 50%, rgba(3, 10, 8, 0.85) 100%)",
+          "linear-gradient(90deg, rgba(1, 24, 21, 0.88) 0%, rgba(3, 40, 34, 0.8) 50%, rgba(1, 24, 21, 0.88) 100%)",
         borderTop: "1.5px solid",
         borderImage:
-          "linear-gradient(to right, rgba(229, 197, 131, 0.05) 0%, rgba(255 228 173 / 0.62) 50%, rgba(229, 197, 131, 0.05) 100%) 1",
-        boxShadow: "0 -4px 10px rgba(0, 0, 0, 0.4)",
+          "linear-gradient(to right, rgba(229, 197, 131, 0.05) 0%, rgba(255, 237, 165, 0.7) 50%, rgba(229, 197, 131, 0.05) 100%) 1",
+        boxShadow: "0 -4px 20px rgba(0, 0, 0, 0.5)",
       }}
     >
       {/* LEFT BRAND SECTION */}
@@ -43,21 +43,21 @@ const NewsTicker = ({ newsItems = [] }) => {
       >
         <Typography
           sx={{
-            color: "#E5C583", // Gold/Yellow touch
+            color: "#FFEDA5", // Zelora Gold
             fontSize: {
               xs: "12px",
               md: "1.1vw",
             },
-            fontWeight: 600,
-            letterSpacing: "0.05em",
+            fontWeight: 700,
+            letterSpacing: "0.06em",
             whiteSpace: "nowrap",
           }}
         >
-          Zelora Updates
+          Zelora Gold Updates
         </Typography>
         <Typography
           sx={{
-            color: "rgba(255, 255, 255, 0.2)",
+            color: "rgba(255, 237, 165, 0.35)",
             fontSize: {
               xs: "14px",
               md: "1.2vw",
@@ -99,7 +99,7 @@ const NewsTicker = ({ newsItems = [] }) => {
               <Typography
                 component="span"
                 sx={{
-                  color: "#EAEFF5",
+                  color: "#FFFFFF",
                   fontSize: {
                     xs: "12px",
                     md: "1.15vw",
@@ -114,9 +114,9 @@ const NewsTicker = ({ newsItems = [] }) => {
               </Typography>
               <span
                 style={{
-                  color: "#4dbf00",
+                  color: "#FFEDA5",
                   fontSize: "1.3vw",
-                  opacity: 0.8,
+                  opacity: 0.9,
                   marginRight: "1vw",
                 }}
               >
