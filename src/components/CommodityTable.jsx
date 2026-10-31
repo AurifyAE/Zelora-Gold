@@ -85,11 +85,13 @@ const CommodityTable = ({ title, items }) => {
         const sellCharge = Number(item.sellCharge) || 0;
 
         const bid = liveRatesLoaded
-          ? ((spotBid + buyPremium) / OUNCE) * AED * weightInGrams * pur + buyCharge
+          ? ((spotBid + buyPremium) / OUNCE) * AED * weightInGrams * pur +
+            buyCharge
           : null;
 
         const ask = liveRatesLoaded
-          ? ((spotAsk + sellPremium) / OUNCE) * AED * weightInGrams * pur + sellCharge
+          ? ((spotAsk + sellPremium) / OUNCE) * AED * weightInGrams * pur +
+            sellCharge
           : null;
 
         return {
@@ -235,6 +237,20 @@ const CommodityTable = ({ title, items }) => {
         >
           UNIT
         </Typography>
+        <Typography
+          sx={{
+            fontSize: {
+              xs: "12px",
+              md: "1.1vw",
+            },
+            fontWeight: 700,
+            color: "#C2FCD4", // Soft Mint / Green
+            letterSpacing: "0.06em",
+            textAlign: "center",
+          }}
+        >
+          BID
+        </Typography>
 
         <Typography
           sx={{
@@ -249,21 +265,6 @@ const CommodityTable = ({ title, items }) => {
           }}
         >
           ASK
-        </Typography>
-
-        <Typography
-          sx={{
-            fontSize: {
-              xs: "12px",
-              md: "1.1vw",
-            },
-            fontWeight: 700,
-            color: "#C2FCD4", // Soft Mint / Green
-            letterSpacing: "0.06em",
-            textAlign: "center",
-          }}
-        >
-          BID
         </Typography>
       </Box>
 
@@ -339,6 +340,21 @@ const CommodityTable = ({ title, items }) => {
                 >
                   {row.unit}
                 </Typography>
+                {/* Column 4: BID rate (Soft Mint Green) */}
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "13px",
+                      md: "1.5vw",
+                    },
+                    fontWeight: 700,
+                    color: "#C2FCD4",
+                    textAlign: "center",
+                    fontVariantNumeric: "tabular-nums",
+                  }}
+                >
+                  {formatPrice(row.bid)}
+                </Typography>
 
                 {/* Column 3: ASK rate (Yellow/Gold) */}
                 <Typography
@@ -354,22 +370,6 @@ const CommodityTable = ({ title, items }) => {
                   }}
                 >
                   {formatPrice(row.ask)}
-                </Typography>
-
-                {/* Column 4: BID rate (Soft Mint Green) */}
-                <Typography
-                  sx={{
-                    fontSize: {
-                      xs: "13px",
-                      md: "1.5vw",
-                    },
-                    fontWeight: 700,
-                    color: "#C2FCD4",
-                    textAlign: "center",
-                    fontVariantNumeric: "tabular-nums",
-                  }}
-                >
-                  {formatPrice(row.bid)}
                 </Typography>
               </Box>
             </SwiperSlide>
