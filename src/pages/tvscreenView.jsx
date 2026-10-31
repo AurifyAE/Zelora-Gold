@@ -16,6 +16,7 @@ import SystemClock from "../components/SystemClock";
 import WorldClockHorizontal from "../components/WorldClock";
 import CommodityTable from "../components/CommodityTable";
 import BuyerSeller from "../components/BuyerSeller";
+import PoweredByAurify from "../components/PoweredByAurify";
 
 function TvScreen() {
   const [showLimitModal, setShowLimitModal] = useState(false);
@@ -289,6 +290,7 @@ function TvScreen() {
 
           <WorldClockHorizontal />
           <SpotRate />
+          <PoweredByAurify />
         </Grid>
 
         <Grid
