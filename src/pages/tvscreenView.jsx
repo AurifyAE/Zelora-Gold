@@ -254,8 +254,8 @@ function TvScreen() {
         <Grid
           xs={12}
           md={6}
-          padding="1vw 4vw 1vw 1vw"
-          gap="1.5vw"
+          padding={{ xs: "1vw", md: "0 2vw 0 1vw" }}
+          gap={{ xs: "15px", md: "1.2vw" }}
           display="flex"
           justifyContent="center"
           alignItems="center"
@@ -264,8 +264,9 @@ function TvScreen() {
           <Box
             sx={{
               height: "auto",
-              width: { xs: "40vw", sm: "25vw" },
-              marginBottom: { xs: "20px", sm: "0vw" },
+              width: { xs: "40vw", sm: "26vw" },
+              marginTop: { xs: "0", md: "-0.8vw" },
+              marginBottom: { xs: "15px", sm: "0vw" },
             }}
           >
             <img src={mainLogo} alt="" className="object-contain w-full" />

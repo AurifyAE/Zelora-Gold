@@ -164,13 +164,13 @@ const CommodityTable = ({ title, items }) => {
     <Box
       sx={{
         width: "100%",
-        borderRadius: "1.2vw",
+        borderRadius: "1.5vw",
         background:
           "linear-gradient(135deg, rgba(2, 36, 31, 0.65) 0%, rgba(1, 22, 19, 0.75) 100%)",
         backdropFilter: "blur(12px)",
         boxShadow:
           "0 0.8vw 2.5vw rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 237, 165, 0.12)",
-        padding: ".3vw 1vw 0 1vw",
+        padding: "0.5vw 1.2vw 0.2vw 1.2vw",
         overflow: "hidden",
         position: "relative",
         "&::before": {
@@ -202,8 +202,8 @@ const CommodityTable = ({ title, items }) => {
         sx={{
           display: "grid",
           gridTemplateColumns: "1.8fr 1fr 1.1fr 1.1fr",
-          py: "0.8vw",
-          px: "1.2vw",
+          py: "0.9vw",
+          px: "1.4vw",
           alignItems: "center",
           borderBottom: "1px solid rgba(229, 197, 131, 0.18)",
         }}
@@ -211,12 +211,12 @@ const CommodityTable = ({ title, items }) => {
         <Typography
           sx={{
             fontSize: {
-              xs: "12px",
-              md: "1.1vw",
+              xs: "13px",
+              md: "1.18vw",
             },
             fontWeight: 700,
             color: "#FFEDA5", // Gold
-            letterSpacing: "0.06em",
+            letterSpacing: "0.08em",
             textAlign: "start",
           }}
         >
@@ -226,12 +226,12 @@ const CommodityTable = ({ title, items }) => {
         <Typography
           sx={{
             fontSize: {
-              xs: "12px",
-              md: "1.1vw",
+              xs: "13px",
+              md: "1.18vw",
             },
             fontWeight: 700,
             color: "#FFEDA5", // Gold
-            letterSpacing: "0.06em",
+            letterSpacing: "0.08em",
             textAlign: "center",
           }}
         >
@@ -240,12 +240,12 @@ const CommodityTable = ({ title, items }) => {
         <Typography
           sx={{
             fontSize: {
-              xs: "12px",
-              md: "1.1vw",
+              xs: "13px",
+              md: "1.18vw",
             },
             fontWeight: 700,
             color: "#C2FCD4", // Soft Mint / Green
-            letterSpacing: "0.06em",
+            letterSpacing: "0.08em",
             textAlign: "center",
           }}
         >
@@ -255,12 +255,12 @@ const CommodityTable = ({ title, items }) => {
         <Typography
           sx={{
             fontSize: {
-              xs: "12px",
-              md: "1.1vw",
+              xs: "13px",
+              md: "1.18vw",
             },
             fontWeight: 700,
             color: "#FFF8EB", // Champagne Gold
-            letterSpacing: "0.06em",
+            letterSpacing: "0.08em",
             textAlign: "center",
           }}
         >
@@ -269,7 +269,7 @@ const CommodityTable = ({ title, items }) => {
       </Box>
 
       {/* Rows Container */}
-      <Box sx={{ mt: "0.5vw" }}>
+      <Box sx={{ mt: "0.4vw" }}>
         <Swiper
           direction="vertical"
           slidesPerView={5}
@@ -281,7 +281,7 @@ const CommodityTable = ({ title, items }) => {
           }}
           speed={3000}
           style={{
-            height: isMobile ? "35vw" : "20vw",
+            height: isMobile ? "35vw" : "23.2vw",
             background: "transparent",
             overflow: "hidden",
           }}
@@ -293,8 +293,8 @@ const CommodityTable = ({ title, items }) => {
                   display: "grid",
                   gridTemplateColumns: "1.8fr 1fr 1.1fr 1.1fr",
                   alignItems: "center",
-                  py: "0.7vw",
-                  px: "1.2vw",
+                  py: "0.8vw",
+                  px: "1.4vw",
                   height: "100%",
                   borderBottom: "1px solid rgba(229, 197, 131, 0.1)",
                 }}
@@ -302,8 +302,8 @@ const CommodityTable = ({ title, items }) => {
                 <Typography
                   sx={{
                     fontSize: {
-                      xs: "13px",
-                      md: "1.5vw",
+                      xs: "14px",
+                      md: "1.65vw",
                     },
                     fontWeight: 600,
                     color: "#FFFFFF",
@@ -315,7 +315,7 @@ const CommodityTable = ({ title, items }) => {
                   {row.purity && (
                     <span
                       style={{
-                        fontSize: "0.95vw",
+                        fontSize: "1.05vw",
                         fontWeight: 500,
                         color: "#FFEDA5",
                         marginLeft: "0.4vw",
@@ -330,8 +330,8 @@ const CommodityTable = ({ title, items }) => {
                 <Typography
                   sx={{
                     fontSize: {
-                      xs: "12px",
-                      md: "1.15vw",
+                      xs: "13px",
+                      md: "1.28vw",
                     },
                     color: "#BAC8D9",
                     textAlign: "center",
@@ -344,8 +344,8 @@ const CommodityTable = ({ title, items }) => {
                 <Typography
                   sx={{
                     fontSize: {
-                      xs: "13px",
-                      md: "1.5vw",
+                      xs: "14px",
+                      md: "1.7vw",
                     },
                     fontWeight: 700,
                     color: "#C2FCD4",
@@ -360,8 +360,8 @@ const CommodityTable = ({ title, items }) => {
                 <Typography
                   sx={{
                     fontSize: {
-                      xs: "13px",
-                      md: "1.5vw",
+                      xs: "14px",
+                      md: "1.7vw",
                     },
                     fontWeight: 700,
                     color: "#FFF0D3",
