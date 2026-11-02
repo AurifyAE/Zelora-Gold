@@ -201,7 +201,7 @@ const CommodityTable = ({ title, items }) => {
       <Box
         sx={{
           display: "grid",
-          gridTemplateColumns: "1.8fr 1fr 1.1fr 1.1fr",
+          gridTemplateColumns: "1.8fr 1fr  1.1fr",
           py: "0.9vw",
           px: "1.4vw",
           alignItems: "center",
@@ -237,7 +237,7 @@ const CommodityTable = ({ title, items }) => {
         >
           UNIT
         </Typography>
-        <Typography
+        {/* <Typography
           sx={{
             fontSize: {
               xs: "13px",
@@ -250,7 +250,7 @@ const CommodityTable = ({ title, items }) => {
           }}
         >
           BID
-        </Typography>
+        </Typography> */}
 
         <Typography
           sx={{
@@ -291,7 +291,7 @@ const CommodityTable = ({ title, items }) => {
               <Box
                 sx={{
                   display: "grid",
-                  gridTemplateColumns: "1.8fr 1fr 1.1fr 1.1fr",
+                  gridTemplateColumns: "1.8fr 1fr  1.1fr",
                   alignItems: "center",
                   py: "0.8vw",
                   px: "1.4vw",
@@ -341,7 +341,7 @@ const CommodityTable = ({ title, items }) => {
                   {row.unit}
                 </Typography>
                 {/* Column 4: BID rate (Soft Mint Green) */}
-                <Typography
+                {/* <Typography
                   sx={{
                     fontSize: {
                       xs: "14px",
@@ -354,7 +354,7 @@ const CommodityTable = ({ title, items }) => {
                   }}
                 >
                   {formatPrice(row.bid)}
-                </Typography>
+                </Typography> */}
 
                 {/* Column 3: ASK rate (Yellow/Gold) */}
                 <Typography
